@@ -52,4 +52,5 @@ def result():
 if __name__ == '__main__':
     # Setup Tesseract executable path
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-    app.run(debug=True)
+    app.debug = True
+    app.run()
