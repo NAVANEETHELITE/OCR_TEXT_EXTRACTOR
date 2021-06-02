@@ -1,6 +1,7 @@
 import datetime
 import io
 import re 
+import cv2
 import pytesseract
 from PIL import Image
 from flask import Flask, request, render_template, redirect, url_for, session
@@ -21,8 +22,9 @@ def scan_file():
     if request.method == 'POST':
         start_time = datetime.datetime.now()
         image_data = request.files['file'].read()
-
-        scanned_text = pytesseract.image_to_string(Image.open(io.BytesIO(image_data)))
+        
+        image=cv2.imread(image_data)
+        scanned_text = pytesseract.image_to_string(Image.open(image))
         scanned_text = re.sub('[^a-zA-Z0-9]', ' ',scanned_text)
         print("Found data:", scanned_text)
 
