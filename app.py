@@ -51,4 +51,4 @@ def result():
 
 if __name__ == '__main__':
     # Setup Tesseract executable path
-    app.run()
+    app.run(debug=True)
