@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEXT RECOGNIZER</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+.heading{
+	font-weight: 100;
+	font-size: 4em;
+	text-shadow: 1px 1px 5px black;
+}
+
+img{
+	height: 90%;
+	width: 100%;
+}
+
+.text{
+	font-size: 32px;
+	font-style: italic;
+}
+
+</style>
+
+
+</head>
+{% block body %}
+
+    <div class="container">
+        <h1 class="text-center" style="font-size: 10vh">TEXT RECOGNIZER<span style="font-size: 3vh;">  BY <B>NAVANEETH</B></span></h1>
+        <hr>
+        <h4>RECOGNIZE TEXT AND EXTRACT </h4>
+
+        <hr>
+        <br><br>
+        <h2>UPLOAD AN IMAGE</h2>
+
+        <div class="text-center">
+            <form action="scanner" method=post enctype=multipart/form-data>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
+                               aria-describedby="inputGroupFileAddon01" accept="image/*">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class="btn btn-raised btn-primary">Extract Text</button>
+            </form>
+        </div>
+    </div>
+
+<!--
+    <form action="scanner" method=post enctype=multipart/form-data>
+        <input type="file" name="file">
+        <input type="submit" value="Scan file">
+    </form>
+    <hr>
+-->
+
+{% if scanned %}
+    <hr>
+    <h1>Extracted Texts</h1>
+{% endif %}
+{% endblock body %}
+
+</body>
+</html>

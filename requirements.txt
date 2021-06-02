@@ -1,0 +1,10 @@
+pytesseract
+opencv-python
+Pillow
+numpy
+Click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug

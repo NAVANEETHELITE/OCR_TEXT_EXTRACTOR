@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RESULT</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+.heading{
+	font-weight: 100;
+	font-size: 4em;
+	text-shadow: 1px 1px 5px black;
+}
+
+img{
+	height: 90%;
+	width: 100%;
+}
+
+.text{
+	font-size: 32px;
+	font-style: italic;
+}
+
+</style>
+
+
+</head>
+{% block body %}
+    <div class="container">
+        <br>
+        <br>
+        <h1>RESULTS</h1>
+        <hr>
+
+        <h2>INFORMATION</h2>
+        <p>Words: {{ words }}</p>
+        <p>Scan time: {{ time }} seconds</p>
+        <hr>
+
+        <h2>EXTRACTED TEXT</h2>
+        <p>{{ text }}</p>
+    </div>
+{% endblock body %}
