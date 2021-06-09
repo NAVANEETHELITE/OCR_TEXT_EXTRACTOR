@@ -5,15 +5,10 @@
 - Result will be empty if the uploaded image doesn't contain any text in it.
 - <strong><b> APP LINK : https://extract-t3xt-nav.herokuapp.com/ </b></strong>
 - <b>NOTE: Before deploying the app, add the following buildpacks in Heroku exactly as the same.</b>
-------
-::
+       - Build Pack 1 :  heroku/python
+       - Build Pack 2 : https://github.com/pathwaysmedical/heroku-buildpack-tesseract
 
-Build Pack 1 :  heroku/python
-Build Pack 2 : https://github.com/pathwaysmedical/heroku-buildpack-tesseract
-
-Index and Result pages are shown below:
-
-
+- Index and Result pages are shown below:
 
 <div class="row">
   <div class="column">
